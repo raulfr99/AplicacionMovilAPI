@@ -1,0 +1,54 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Categorias</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card [routerLink]="'/cat-autos'">
+    <img src="../assets/img/autos.jpg" />
+    <ion-card-header>
+      <ion-card-subtitle>Categoria</ion-card-subtitle>
+      <ion-card-title>Autos</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      Encuentra la solucion para tu auto. Ponchadura, no arranca, te quedaste sin bateria etc, aqui lo solucionamos.
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card [routerLink]="'/cat-hogar'">
+    <img src="../assets/img/hogar.jpeg" />
+    <ion-card-header>
+      <ion-card-subtitle>Categoria</ion-card-subtitle>
+      <ion-card-title>Hogar</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      Encuentra ayuda para tu hogar, desde una niñera hasta quien cocine por ti!.
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card [routerLink]="'/cat-tareas'">
+    <img src="../assets/img/tareas.jpg" />
+    <ion-card-header>
+      <ion-card-subtitle>Categoria</ion-card-subtitle>
+      <ion-card-title>Oficios del Hogar</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+     Plomeros, carpinteros, pintores, electricistas y mas!
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card [routerLink]="'/cat-informatica'">
+    <img src="../assets/img/informatica.png" />
+    <ion-card-header>
+      <ion-card-subtitle>Categoria</ion-card-subtitle>
+      <ion-card-title>Informatica</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+     No sabes encender tu PC?, No puedes conectarte a internet?, Tu PC no enciende?
+    </ion-card-content>
+  </ion-card>
+</ion-content>

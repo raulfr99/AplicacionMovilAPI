@@ -1,0 +1,123 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Inicio</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">{{ folder }}</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  
+  <ion-list>
+    <ion-item *ngFor="let usuario of usuarios;" [routerLink]="['/calificar',usuario.id]">
+     
+
+      <ion-card>
+        <ion-item>
+          <ion-avatar slot="start">
+            <img src="http://antraxsw.000webhostapp.com/img/{{usuario.imagen}}" >
+          </ion-avatar>
+          <ion-label>
+            <h3>{{ usuario.nombre }}</h3>
+            <p>{{ usuario.apellidos }}</p>
+          </ion-label>
+        </ion-item>
+      
+        <img src="http://antraxsw.000webhostapp.com/img/{{usuario.imagen}}" style="width: 500px;height: 350px;"alt="ion">
+        <ion-card-header>
+          <ion-card-title>Descripcion:</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          <p>{{ usuario.descripcion }}</p>
+        
+        </ion-card-content>
+      
+        <ion-footer>
+          <ion-row>
+            <ion-col center text-center>
+              <ng-container
+              *ngIf="usuario.calificacion==0">
+              <div>
+                <span class="fa fa-star "></span>
+                <span class="fa fa-star "></span>
+                <span class="fa fa-star "></span>
+                <span class="fa fa-star "></span>
+                <span class="fa fa-star "></span>
+              </div>
+            </ng-container>
+              <ng-container
+              *ngIf="usuario.calificacion==1">
+              <div>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star "></span>
+                <span class="fa fa-star"></span>
+                <span class="fa fa-star "></span>
+                <span class="fa fa-star "></span>
+
+              </div>
+            </ng-container>
+            <ng-container
+            *ngIf="usuario.calificacion==2">
+            <div>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star"></span>
+              <span class="fa fa-star "></span>
+              <span class="fa fa-star "></span>
+
+            </div>
+          </ng-container>
+          <ng-container
+          *ngIf="usuario.calificacion==3">
+          <div>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star "></span>
+            <span class="fa fa-star "></span>
+
+          </div>
+        </ng-container>
+        
+            <ng-container
+            *ngIf="usuario.calificacion==4">
+            <div>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star "></span>
+
+            </div>
+          </ng-container>
+          <ng-container
+          *ngIf="usuario.calificacion==5">
+          <div>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+
+          </div>
+        </ng-container>
+            
+                
+              
+            </ion-col>
+           
+            
+          </ion-row>
+        </ion-footer>
+      </ion-card>
+      
+    </ion-item>
+  </ion-list>
+</ion-content>

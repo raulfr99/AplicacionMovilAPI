@@ -1,0 +1,61 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Calificar Usuario</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-item *ngFor="let usuario of usuarios;" [routerLink]="['/calificar',usuario.id]">
+     
+
+    <ion-card>
+      <ion-item>
+        <ion-avatar slot="start">
+          <img src="http://antraxsw.000webhostapp.com/img/{{usuario.imagen}}" >
+        </ion-avatar>
+        <ion-label>
+          <h3>{{ usuario.nombre }}</h3>
+          <p>{{ usuario.apellidos }}</p>
+        </ion-label>
+      </ion-item>
+    
+      <img src="http://antraxsw.000webhostapp.com/img/{{usuario.imagen}}" style="width: 500px;height: 350px;"alt="ion">
+      <ion-card-header>
+        <ion-card-title>Descripcion:</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <p>{{ usuario.apellidos }}</p>
+      </ion-card-content>
+    
+      <ion-footer>
+        <ion-row>
+          <ion-col center text-center>
+            <div class="rate" >
+              <input type="radio" id="star5" name="rate" value="5"  />
+              <label for="star5" title="text" (click)="calificar(5)">5 Estrellas</label>
+              <input type="radio" id="star4" name="rate" value="4" />
+              <label for="star4" title="text" (click)="calificar(4)">4 Estrellas</label>
+              <input type="radio" id="star3" name="rate" value="3" />
+              <label for="star3" title="text" (click)="calificar(3)">3 Estrellas</label>
+              <input type="radio" id="star2" name="rate" value="2" />
+              <label for="star2" title="text" (click)="calificar(2)">2 Estrellas</label>
+              <input type="radio" id="star1" name="rate" value="1" />
+              <label for="star1" title="text" (click)="calificar(1)">1 Estrella</label>
+            </div>
+          
+              
+            
+          </ion-col>
+         
+          
+        </ion-row>
+      </ion-footer>
+    </ion-card>
+    
+  </ion-item>
+
+</ion-content>

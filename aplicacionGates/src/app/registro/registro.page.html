@@ -1,0 +1,70 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Registro</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form >
+    <ion-item lines="full">
+      <ion-label position="floating">Nombre</ion-label>
+      <ion-input type="text" required  [(ngModel)]="todo.nombre" name="nombre"></ion-input>
+    </ion-item>
+
+    <ion-item lines="full">
+      <ion-label position="floating">Apellidos</ion-label>
+      <ion-input type="text" required [(ngModel)]="todo.apellidos" name="apellidos"></ion-input>
+    </ion-item>
+
+    <ion-item lines="full">
+      <ion-label position="floating">Numero de Telefono</ion-label>
+      <ion-input type="text" required [(ngModel)]="todo.numtelefono" name="numtelefono"></ion-input>
+    </ion-item>
+
+    <ion-item lines="full">
+      <ion-label position="floating">Contraseña</ion-label>
+      <ion-input type="password" required [(ngModel)]="todo.contrasena" name="contrasena"></ion-input>
+    </ion-item>
+    <ion-item lines="full">
+      <ion-label position="floating">Edad</ion-label>
+      <ion-input type="text" required [(ngModel)]="todo.edad" name="edad"></ion-input>
+    </ion-item>
+    <ion-item lines="full">
+      <ion-label position="floating">Descripcion Breve</ion-label>
+      <ion-input type="text" required [(ngModel)]="todo.descripcion" name="descripcion"></ion-input>
+    </ion-item>
+    
+    <ion-item lines="full">
+      <ion-label position="floating">Imagen</ion-label>
+      <br>
+      <input #imageInput type="file" (change)="processFile(imageInput)">
+    </ion-item>
+
+    <ion-item lines="full">
+      <ion-label position="floating">Oficio</ion-label>
+      <br>
+      <ion-select [(ngModel)]="todo.oficio" name="oficio">
+        <ion-select-option value="1">Carpinter@</ion-select-option>
+        <ion-select-option value="2">Plomer@</ion-select-option>
+        <ion-select-option value="3">Mecanic@</ion-select-option>
+        <ion-select-option value="4">Tecnic@ en Computadoras</ion-select-option>
+        <ion-select-option value="5">Electricista</ion-select-option>
+        <ion-select-option value="6">Cociner@</ion-select-option>
+        <ion-select-option value="7">Niñera</ion-select-option>
+        <ion-select-option value="8">Pintor/a</ion-select-option>
+        <ion-select-option value="9">Desponchador/a</ion-select-option>
+        <ion-select-option value="10">Tecnico Internet</ion-select-option>
+        <ion-select-option value="11">Repara Electrodomesticos</ion-select-option>
+        <ion-select-option value="12">Lavar ropa</ion-select-option>
+      </ion-select>
+    </ion-item>
+    <ion-row>
+      <ion-col>
+        <ion-button type="submit" color="danger" (click)="registroTrabajador()"  expand="block">Registrarse</ion-button>
+      </ion-col>
+    </ion-row>
+  </form>
+</ion-content>
